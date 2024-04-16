@@ -4,7 +4,7 @@
   "description": "Portfolio Website with HTML SASS And JavaScript",
   "main": "app.js",
   "scripts": {
-    "compile-sass": "sass app.scss app.css --no-source-map"
+    "compile-sass": "sass app.scss app.css --watch --no-source-map"
   },
   "repository": {
     "type": "git",
