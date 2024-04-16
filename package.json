@@ -1,0 +1,22 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "Portfolio Website with HTML SASS And JavaScript",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xeeshaunali/javaScript.git"
+  },
+  "author": "Xeeshaun Ali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xeeshaunali/javaScript/issues"
+  },
+  "homepage": "https://github.com/xeeshaunali/javaScript#readme",
+  "devDependencies": {
+    "sass": "^1.75.0"
+  }
+}
