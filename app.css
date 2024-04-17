@@ -1,7 +1,4 @@
 .body {
-  background-color: white;
-}
-
-.navbar {
-  background-color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }

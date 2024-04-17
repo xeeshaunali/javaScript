@@ -1,10 +1,2 @@
-$white:white;
-$black: black;
-
-.body {
-    background-color: $white;
-}
-
-.navbar {
-    background-color: $black;
-}
+// Import base modules
+@use 'scss/base/typegraphy';
