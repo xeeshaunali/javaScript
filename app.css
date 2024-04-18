@@ -35,5 +35,12 @@ body {
 .nav__wrapper__ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+.nav__wrapper__ul__li__a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #000;
+  font: 1.4rem;
+  font-weight: bolder;
 }
