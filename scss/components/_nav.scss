@@ -13,13 +13,12 @@
     display: flex;
     justify-content: center;        
 
-    &__wrapper {
+    &__wrapper { // & means parent class which in this case is .nav so the full form of this class is .nav__wrapper {}
         width: 100%;
         max-width: 120rem;
         display: flex;        
         justify-content: space-between;
-        align-items: center;
-
+        align-items: center;        
         &__ul {
             list-style: none;
             display: flex;
@@ -34,8 +33,18 @@
                     font-weight: bolder;
                     padding-left: 1.5rem;
                     padding-right: 1.5rem;
-
+                }// this will select last li in code as the3 same is last child of parent  and remove padding from right of blogs 
+                &:last-child &__a {
+                    padding-right: 0;
                 }
+
+                &:first-child &__a {
+                    color: $green-500;
+                }
+
+                &:nth-child(2) &__a {
+                    color: red;
+                }  
             }
         }       
         

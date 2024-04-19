@@ -46,3 +46,12 @@ body {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
+.nav__wrapper__ul__li:last-child .nav__wrapper__ul__li__a {
+  padding-right: 0;
+}
+.nav__wrapper__ul__li:first-child .nav__wrapper__ul__li__a {
+  color: #10B981;
+}
+.nav__wrapper__ul__li:nth-child(2) .nav__wrapper__ul__li__a {
+  color: red;
+}
