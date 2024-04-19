@@ -32,6 +32,13 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.nav__wrapper__logo__brand {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
 .nav__wrapper__ul {
   list-style: none;
   display: flex;
