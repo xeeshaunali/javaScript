@@ -42,7 +42,14 @@ body {
 }
 .nav__wrapper__logo__brand:after {
   position: absolute;
-  content: "hi after class";
+  content: "";
+  right: -1;
+  bottom: 0.6rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: #10B981;
+  border-radius: 50%;
+  box-shadow: 0.2rem 0.2rem #6EE7B7;
 }
 .nav__wrapper__ul {
   list-style: none;

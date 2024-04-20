@@ -29,8 +29,15 @@
                 font-weight: 600;
                 position: relative;
                 &:after { // after means we can add something after brand class
-                    position: absolute;
-                    content: "hi after class";
+                    position: absolute; //create . after name
+                    content: "";
+                    right: -1;
+                    bottom: 0.6rem;
+                    width: 0.8rem;
+                    height: 0.8rem;
+                    background: $green-500;
+                    border-radius: 50%;
+                    box-shadow: 0.2rem 0.2rem $green-300;
                 }
             }
         }
