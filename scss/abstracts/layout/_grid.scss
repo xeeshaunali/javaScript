@@ -6,4 +6,21 @@
     max-width: $maxWidth; 
     padding-left: $gutter;
     padding-right: $gutter;
+    //making div center
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+// to make website responsive we will use media query 
+// Keyword for media query is @media () {}
+// inside () perenthedis we can use max-width or min-width
+
+@media (min-width: 1200px) {
+// min-widht means if we have screen size above 1200px then run code
+// insided the curly brases we can target CSS classes or selectors 
+// target body selector
+    body {
+            background: green;        
+    }
+
 }
