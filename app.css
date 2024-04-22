@@ -42,9 +42,9 @@ body {
 }
 .nav__wrapper__logo__brand:after {
   position: absolute;
-  content: "";
   right: -1;
   bottom: 0.6rem;
+  content: "";
   width: 0.8rem;
   height: 0.8rem;
   background: #10B981;

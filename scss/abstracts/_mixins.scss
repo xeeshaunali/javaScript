@@ -1,5 +1,18 @@
+// mixins for flex box.
+
 @mixin flexBox($x,$y) { // $x means justify content $y means aligned itends
     display: flex;
     justify-content: $x;
     align-items: $y;
+}
+
+
+//mixins for positions.
+
+@mixin position($name,$top, $right, $bottom, $left) {
+    position: $name;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
 }

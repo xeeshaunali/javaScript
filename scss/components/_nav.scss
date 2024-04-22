@@ -1,4 +1,5 @@
 @use '../abstracts/colors'  as *;
+@use '../abstracts/mixins' as *;
 
 // navbar Design
 
@@ -6,19 +7,22 @@
     width: 100%;
     height: 7rem;
     background: $white;
-    position: fixed;
-    top: 0;
-    left: 0;
+    @include position(fixed,0, null, null, 0);
+    //position: fixed;
+    //top: 0;
+    //left: 0;
     border-bottom: 0.1rem solid $gray-100;
-    display: flex;
-    justify-content: center;        
+    @include flexBox(center, null); // this is mixin null is don't use align-items property;
+    // display: flex;
+    // justify-content: center;        
 
     &__wrapper { // & means parent class which in this case is .nav so the full form of this class is .nav__wrapper {}
         width: 100%;
         max-width: 120rem;
-        display: flex;        
-        justify-content: space-between;
-        align-items: center;
+        @include flexBox(space-between,center); //mixin here both properties are use instead of following properties.
+        // display: flex;        
+        // justify-content: space-between;
+        // align-items: center;
         
         &__logo { // target logo in nav wrapper 
             &__brand {                
@@ -27,12 +31,14 @@
                 color: $black;
                 font-size: 2.5rem;
                 font-weight: 600;
-                position: relative;
-                &:after { // after means we can add something after brand class
-                    position: absolute; //create . after name
+                @include position(relative,null, null, null, null);
+                //position: relative;
+                &:after { // after means we can add something after brand class                   
+                    @include position(absolute,null, -1, 0.6rem, null);
+                    //position: absolute; //create . after name
                     content: "";
-                    right: -1;
-                    bottom: 0.6rem;
+                    //right: -1;
+                    //bottom: 0.6rem;
                     width: 0.8rem;
                     height: 0.8rem;
                     background: $green-500;
@@ -56,7 +62,7 @@
                     font-weight: bolder;
                     padding-left: 1.5rem;
                     padding-right: 1.5rem;
-                }// this will select last li in code as the3 same is last child of parent  and remove padding from right of blogs 
+                }// this will select last li in code as the same is last child of parent  and remove padding from right of blogs 
                 &:last-child &__a {
                     padding-right: 0;
                 }
