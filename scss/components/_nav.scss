@@ -1,5 +1,9 @@
-@use '../abstracts/colors'  as *;
-@use '../abstracts/mixins' as *;
+ @use '../abstracts/colors'  as *;
+ @use '../abstracts/mixins' as *;
+
+//now we will index.scss as the same contains bot modules of colors and mixins and index.scss is using forward rule hence;
+
+@use '../abstracts'; // both the modules are accessable through index module
 
 
 // navbar Design

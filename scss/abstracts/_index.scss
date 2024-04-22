@@ -1,3 +1,5 @@
+@forward '../abstracts/colors';
+@forward '../abstracts/mixins';
+
 // here i want to use both _colors.scss and _minxins.scss i will use forward rule
 // forward rule means grab some module e.g _colors.scss and send somewhere
-@forward 'colors';
