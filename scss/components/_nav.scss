@@ -33,7 +33,7 @@
                 font-weight: 600;
                 @include position(relative,null, null, null, null);
                 //position: relative;
-                &:after { // after means we can add something after brand class                   
+                &::after { // after means we can add something after brand class                   
                     @include position(absolute,null, -1, 0.6rem, null);
                     //position: absolute; //create . after name
                     content: "";

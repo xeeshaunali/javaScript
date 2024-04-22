@@ -40,7 +40,7 @@ body {
   font-weight: 600;
   position: relative;
 }
-.nav__wrapper__logo__brand:after {
+.nav__wrapper__logo__brand::after {
   position: absolute;
   right: -1;
   bottom: 0.6rem;
