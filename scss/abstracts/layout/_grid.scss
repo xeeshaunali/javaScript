@@ -1,0 +1,9 @@
+@use '../index' as *;
+
+.container {
+    width: 100%;
+    // accessed from varialble.scss via index.scss using @forward and @use keywords
+    max-width: $maxWidth; 
+    padding-left: $gutter;
+    padding-right: $gutter;
+}

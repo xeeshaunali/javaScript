@@ -1,3 +1,4 @@
+// mixins are used to avoid repeated code.
 // mixins for flex box.
 
 @mixin flexBox($x,$y) { // $x means justify content $y means aligned itends
@@ -17,4 +18,3 @@
     left: $left;
 }
 
-// mixins are use to avoid repeated code.

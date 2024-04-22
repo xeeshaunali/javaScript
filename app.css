@@ -73,3 +73,10 @@ body {
 .nav__wrapper__ul__li:first-child .nav__wrapper__ul__li__a {
   color: #10B981;
 }
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
