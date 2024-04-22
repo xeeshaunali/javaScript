@@ -28,6 +28,8 @@ body {
 .nav__wrapper {
   width: 100%;
   max-width: 120rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
