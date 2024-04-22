@@ -23,7 +23,7 @@
 
     &__wrapper { // & means parent class which in this case is .nav so the full form of this class is .nav__wrapper {}
         width: 100%;
-        max-width: 120rem; // If the screen size is less then 120rem we need padding left and right to make some space 
+        max-width: $maxWidth; // If the screen size is less then 120rem we need padding left and right to make some space and accessed from varialbles.scss as the value is save inside a variable
 
         padding-left: $gutter; // accessed from varialble.scss via index.scss
         padding-right: $gutter; 
