@@ -88,3 +88,13 @@ body {
     background: green;
   }
 }
+@media (max-width: 1200px) {
+  body {
+    background-color: red;
+  }
+}
+@media (max-width: 920px) {
+  body {
+    background: indigo;
+  }
+}

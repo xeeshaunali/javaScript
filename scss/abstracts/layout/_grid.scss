@@ -22,5 +22,18 @@
     body {
             background: green;        
     }
+}
 
+@media (max-width: 1200px) {
+    // if max-width is 1200px or below 1200px background will me red once it crosses 1000px color will change.
+    body {
+        background-color: red;
+    }
+}
+
+
+@media (max-width:920px) {
+    body {
+        background: indigo;
+    }
 }
