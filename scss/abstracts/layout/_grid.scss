@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use '../index' as *;
 
 .container {
@@ -45,13 +46,17 @@
 }
 
 
-@media (min-width:1200px) {
-    // We will use pixels instead of rem as some browsers do not run media query in rem.
+
+
+// We will use pixels instead of rem as some browsers do not run media query in rem.
     // this code will work when the width is equal or more then 1200px.
     // we will create 12 columns here 
     // we will use scss for loop  iteration.
+@media (min-width:1200px) {
     @for $i from 1 through 12 {
-        @debug $i 
-         
+        .col-xlg-#{$i} {
+            flex-basis: math.div(100%,12)*$i;
+            max-width: math.div(100%,12)*$i;
+        }
     }
 }
