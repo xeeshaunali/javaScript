@@ -19,21 +19,26 @@
 // min-widht means if we have screen size above 1200px then run code
 // insided the curly brases we can target CSS classes or selectors 
 // target body selector
-    body {
-            background: green;        
-    }
+    // body {
+    //         background: green;        
+    // }
 }
 
 @media (max-width: 1200px) {
     // if max-width is 1200px or below 1200px background will me red once it crosses 1000px color will change.
-    body {
-        background-color: red;
-    }
+    // body {
+    //     background-color: red;
+    // }
 }
 
 
 @media (max-width:920px) {
-    body {
-        background: indigo;
-    }
+    // body {
+    //     background: indigo;
+    // }
 }
+
+
+
+
+
