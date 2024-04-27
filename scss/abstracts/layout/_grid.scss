@@ -64,7 +64,7 @@
 
 @media (max-width:1200px) {
     @for $i from 1 through 12 {
-        .col-lrg-#{$i} {
+        .col-lg-#{$i} {
             flex-basis: math.div(100%, 12) * $i;
             min-width: math.div(100%, 12) * $i;
 
