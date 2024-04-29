@@ -60,31 +60,20 @@
             }
         }
     }
-
     @else if $key == lg {
-        @media (max-width:$value) {
+        @media (max-width: $value) {
             @for $i from 1 through 12 {
                 .col-#{$key}-#{$i} {
-                    flex-basis: math.div(100%, 12) * $i;
-                    max-width: math.div(100%, 12) * $i;
+                    flex-basis: math.div(100%,12)*$i;
+                    max-width: math.div(100%,12)*$i;
                 }
             }
         }
     }
-
-    @else if $key == md {
-        @media (max-width: $value) {
-            @for $i from 1 through 12 {
-                .col-#{$key}-#{$i} {
-                    flex-basis: math.div(100%, 12) * $i;
-                    max-width: math.div(100%, 12) * $i;
-                }
-            }
-        }
-    }  
-
-
     
+    
+
+// last curly brases    
 }
 
 
