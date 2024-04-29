@@ -41,7 +41,8 @@
 
 .row {
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
+    align-items: center;        
 }
 
 // We will use pixels instead of rem as some browsers do not run media query in rem.
@@ -55,7 +56,7 @@
     @for $i from 1 through 12 {
         .col-xlg-#{$i} {
             flex-basis: math.div(100%,12)*$i;
-            max-width: math.div(100%,12)*$i;
+            max-width: math.div(100%,12)*$i;            
             
         }
     }
@@ -67,7 +68,7 @@
     @for $i from 1 through 12 {
         .col-lg-#{$i} {
             flex-basis: math.div(100%, 12) * $i;
-            max-width: math.div(100%, 12) * $i;
+            max-width: math.div(100%, 12) * $i;            
 
         }
     }
@@ -89,6 +90,18 @@
 @media (max-width:768px) {
     @for $i from 1 through 12 {
         .col-sm-#{$i} {
+            flex-basis: math.div(100%, 12) * $i;
+            max-width: math.div(100%, 12) * $i;
+        }
+    }
+}
+
+
+//Columns for extra small screens from 480px and below
+
+@media () {
+    @for $i from 1 through 12 {
+        .col-xsm-#{$i} {
             flex-basis: math.div(100%, 12) * $i;
             max-width: math.div(100%, 12) * $i;
         }
