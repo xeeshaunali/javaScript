@@ -70,7 +70,36 @@
             }
         }
     }
-    
+    @else if $key == md {
+        @media (max-width: $value) {
+            @for $i from 1 through 12 {
+                .col-#{$key}-#{$i} {
+                    flex-basis: math.div(100%,12)*$i;
+                    max-width: math.div(100%,12)*$i;
+                }
+            }
+        }
+    }
+    @else if $key == sm {
+        @media (max-width: $value) {
+            @for $i from 1 through 12 {
+                .col-#{$key}-#{$i} {
+                    flex-basis: math.div(100%,12)*$i;
+                    max-width: math.div(100%,12)*$i;
+                }
+            }
+        }
+    }
+    @else if $key == xsm {
+        @media (max-width: $value) {
+            @for $i from 1 through 12 {
+                .col-#{$key}-#{$i} {
+                    flex-basis: math.div(100%,12)*$i;
+                    max-width: math.div(100%,12)*$i;
+                }
+            }  
+        }
+    }
     
 
 // last curly brases    
@@ -127,26 +156,28 @@
 
 
 // Columns for small screens or extra small screens 
+//04
 
-@media (max-width:768px) {
-    @for $i from 1 through 12 {
-        .col-sm-#{$i} {
-            flex-basis: math.div(100%, 12) * $i;
-            max-width: math.div(100%, 12) * $i;
-        }
-    }
-}
+// @media (max-width:768px) {
+//     @for $i from 1 through 12 {
+//         .col-sm-#{$i} {
+//             flex-basis: math.div(100%, 12) * $i;
+//             max-width: math.div(100%, 12) * $i;
+//         }
+//     }
+// }
 
 
 //Columns for extra small screens from 480px and below
+//05
 
-@media (max-width:480px) {
-    @for $i from 1 through 12 {
-        .col-xsm-#{$i} {
-            flex-basis: math.div(100%, 12) * $i;
-            max-width: math.div(100%, 12) * $i;
-        }
-    }
-}
+// @media (max-width:480px) {
+//     @for $i from 1 through 12 {
+//         .col-xsm-#{$i} {
+//             flex-basis: math.div(100%, 12) * $i;
+//             max-width: math.div(100%, 12) * $i;
+//         }
+//     }
+// }
 
 
