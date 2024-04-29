@@ -48,6 +48,8 @@
 
 
 @each $key, $value in $breakPoints {
+
+// if else statement all screen types
     @if $key == xlg {
         @media (min-width: $value){
             @for $i from 1 through 12 {
@@ -58,7 +60,35 @@
             }
         }
     }
+
+    @else if $key == lg {
+        @media (max-width:1200px) {
+            @for $i from 1 through 12 {
+                .col-#{$key}-#{$i} {
+                    flex-basis: math.div(100%, 12) * $i;
+                    max-width: math.div(100%, 12) * $i;
+                }
+            }
+        }
+    }
+
+    @else if $key == md {
+        @media (max-width: 992px) {
+            @for $i from 1 through 12 {
+                .col-#{$key}-#{$i} {
+                    flex-basis: math.div(100%, 12) * $i;
+                    max-width: math.div(100%, 12) * $i;
+                }
+            }
+        }
+    }
+
+
+    @else if $key == md {
+        
+    }
 }
+
 
 
 // We will use pixels instead of rem as some browsers do not run media query in rem.
@@ -70,37 +100,43 @@
 
 
     // from 1200px and above
-@media (min-width:1200px) {
-    @for $i from 1 through 12 {
-        .col-xlg-#{$i} {
-            flex-basis: math.div(100%,12)*$i;
-            max-width: math.div(100%,12)*$i;            
+    // 01
+
+// @media (min-width:1200px) {
+//     @for $i from 1 through 12 {
+//         .col-xlg-#{$i} {
+//             flex-basis: math.div(100%,12)*$i;
+//             max-width: math.div(100%,12)*$i;            
             
-        }
-    }
-}
+//         }
+//     }
+// }
 
 
     // from 1200px to 992px
-@media (max-width:1200px) {
-    @for $i from 1 through 12 {
-        .col-lg-#{$i} {
-            flex-basis: math.div(100%, 12) * $i;
-            max-width: math.div(100%, 12) * $i;            
+    // 02
 
-        }
-    }
-}
+// @media (max-width:1200px) {
+//     @for $i from 1 through 12 {
+//         .col-lg-#{$i} {
+//             flex-basis: math.div(100%, 12) * $i;
+//             max-width: math.div(100%, 12) * $i;            
 
-// Columsn for medium screen from 992px to 768px
-@media (max-width:992px) {
-    @for $i from 1 through 12 {
-        .col-md-#{$i} {
-            flex-basis: math.div(100%, 12) * $i;
-            max-width: math.div(100%, 12) * $i;
-        }
-    }
-}
+//         }
+//     }
+// }
+
+    // Columsn for medium screen from 992px to 768px
+    //03
+
+// @media (max-width:992px) {
+//     @for $i from 1 through 12 {
+//         .col-md-#{$i} {
+//             flex-basis: math.div(100%, 12) * $i;
+//             max-width: math.div(100%, 12) * $i;
+//         }
+//     }
+// }
 
 
 // Columns for small screens or extra small screens 
