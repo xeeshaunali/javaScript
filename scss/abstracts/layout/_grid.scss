@@ -73,7 +73,7 @@
     }
 }
 
-// Columsn for medium screen from 992px and below till 0
+// Columsn for medium screen from 992px to 768px
 @media (max-width:992px) {
     @for $i from 1 through 12 {
         .col-md-#{$i} {
@@ -83,3 +83,14 @@
     }
 }
 
+
+// Columns for small screens or extra small screens 
+
+@media (max-width:768px) {
+    @for $i from 1 through 12 {
+        .col-sm-#{$i} {
+            flex-basis: math.div(100%, 12) * $i;
+            max-width: math.div(100%, 12) * $i;
+        }
+    }
+}
