@@ -50,12 +50,7 @@
 @each $key, $value in $breakPoints {
     @if $key == xlg {
         @media (min-width: $value) {
-            @for $i from 1 through 12 {
-                .col-#{$key}-#{$i} {
-                    flex-basis: math.div(100%,12)*$i;
-                    max-width: math.div(100%,12)*$i;
-                }
-            }
+           @include columns($key);
         }
     }
     @else if $key == lg {
@@ -88,6 +83,7 @@
             }
         }
     }
+
 }
 
 
