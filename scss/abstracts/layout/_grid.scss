@@ -45,10 +45,28 @@
     align-items: center;        
 }
 
+
+
+@each $key, $value in $breakPoints {
+    @if $key == xlg {
+        @media (min-width: $value){
+            @for $i from 1 through 12 {
+                .col-#{$key}-#{$i} {
+                    flex-basis: math.div(100%, 12) * $i;
+                    max-width: math.div(100%, 12) * $i;
+                }
+            }
+        }
+    }
+}
+
+
 // We will use pixels instead of rem as some browsers do not run media query in rem.
     // this code will work when the width is equal or more then 1200px.
     // we will create 12 columns here 
     // we will use scss for loop  iteration.
+
+
 
 
     // from 1200px and above
@@ -99,7 +117,7 @@
 
 //Columns for extra small screens from 480px and below
 
-@media () {
+@media (max-width:480px) {
     @for $i from 1 through 12 {
         .col-xsm-#{$i} {
             flex-basis: math.div(100%, 12) * $i;
@@ -107,3 +125,5 @@
         }
     }
 }
+
+
