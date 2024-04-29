@@ -48,14 +48,12 @@
 
 
 @each $key, $value in $breakPoints {
-
-// if else statement all screen types
     @if $key == xlg {
-        @media (min-width: $value){
+        @media (min-width: $value) {
             @for $i from 1 through 12 {
                 .col-#{$key}-#{$i} {
-                    flex-basis: math.div(100%, 12) * $i;
-                    max-width: math.div(100%, 12) * $i;
+                    flex-basis: math.div(100%,12)*$i;
+                    max-width: math.div(100%,12)*$i;
                 }
             }
         }
@@ -90,21 +88,7 @@
             }
         }
     }
-    @else if $key == xsm {
-        @media (max-width: $value) {
-            @for $i from 1 through 12 {
-                .col-#{$key}-#{$i} {
-                    flex-basis: math.div(100%,12)*$i;
-                    max-width: math.div(100%,12)*$i;
-                }
-            }  
-        }
-    }
-    
-
-// last curly brases    
 }
-
 
 
 // We will use pixels instead of rem as some browsers do not run media query in rem.
