@@ -50,6 +50,7 @@
 @each $key, $value in $breakPoints {
     @if $key == xlg {
         @media (min-width: $value) {
+        // here i have user mixin instead of for loop as the same code is being repeated     
            @include columns($key);
         }
     }

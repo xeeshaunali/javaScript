@@ -61,6 +61,10 @@
             list-style: none;
             display: flex;
             justify-content: space-evenly;
+            // nested media query
+            // @media (max-width:768px) {
+            //     background-color: red;
+            // }
 
             &__li {
                 &__a {
