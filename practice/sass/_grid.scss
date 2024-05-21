@@ -1,0 +1,63 @@
+@use "sass:math";
+@use "gutter";
+
+$grid:("xlg":1200px, "lg":1200px, "md":992px, "sm":768px,"xsm":480px);
+
+$breakPoints:("xlg":1200px, "lg":1200px, "md":992px, "sm":768px,"xsm":480px);
+
+
+
+
+
+@each $key, $value in $grid {
+    @if $key == "xlg" {
+        @media (min-width:$value) {
+            @for $i from 1 through 12 {
+                .col-#{$key}-#{$i} {
+                    flex-basis: math.div(100%, 12) * $i;
+                    max-width: math.div(100%, 12) * $i;
+                }
+            }
+        }
+    }
+    @else if $key == "lg" {
+        @media (max-width:$value) {
+            @for $i from 1 through 12 {
+                .col-#{$key}-#{$i} {
+                    flex-basis: math.div(100%, 12) * $i;
+                    max-width: math.div(100%, 12) *$i;
+                }
+            }
+        }
+    }
+    @else if $key == "md" {
+        @media (max-width:$value) {
+            @for $i from 1 through 12 {
+                .col-#{$key}-#{$i} {
+                    flex-basis: math.div(100%, 12) * $i;
+                    max-width: math.div(100%, 12) * $i;
+                }
+            }
+        }
+    }
+    @else if $key == "sm" {
+        @media (max-width:$value) {
+            @for $i from 1 through 12 {
+                .col-#{$key}-#{$i} {
+                    flex-basis: math.div(100%, 12) * $i;
+                    max-width: math.div(100%, 12) * $i;
+                }
+            }
+        }
+    }
+    @else if $key == "xsm" {
+        @media (max-width:$value) {
+            @for $i from 1 through 12 {
+                .col-#{$key}-#{$i} {
+                    flex-basis: math.div(100%, 12) * $i;
+                    max-width: math.div(100%, 12) * $i;
+                }
+            }
+        }
+    }
+}
