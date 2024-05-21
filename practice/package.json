@@ -1,0 +1,15 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "Sass",
+  "main": "app.js",
+  "scripts": {
+    "compile-sass": "sass app.scss app.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "xeeshaun"
+  },
+  "author": "Xeeshaun",
+  "license": "ISC"
+}
