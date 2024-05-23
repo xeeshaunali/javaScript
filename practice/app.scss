@@ -3,9 +3,6 @@
 @use "sass/colors" as *;
 @use "sass/gutter" as *;
 
-
-
-
 .cards {
     display: flex;
     justify-content: space-around;
@@ -15,6 +12,7 @@
     padding-left: $gutter;        
     padding-right: $gutter;
     flex-basis: 100%;
+    gap: 1rem !important;
 }
 
 .card1 {
