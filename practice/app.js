@@ -106,6 +106,9 @@ for (var i = 0; i < firstName.length; i++ ) {
 // }
 
 
+
+// EVEN OFDD PROGRAM
+
 var arr = [1,2,3,4,5,6,7,8,9];
 var even = [];
 var odd  = [];
@@ -120,9 +123,68 @@ for (var i = 0; i<=arr.length; i++) {
 console.log(even);
 console.log(odd);
 
+//CONVERT TO STRING
+
 var number = 999;
 var myNumber = number.toString();
 console.log(myNumber.length);
-var index1 = myNumber.indexOf(-1);
-console.log(index1);
+var myNumber
+
+
+
+
+// var pick = prompt("Please Select Alphabate");
+
+// var names = ["a","b","c","d"];
+
+// for (var i = 0; i <=names.length; i++) {
+//     if (pick == names[i]) {
+//         alert("Found")
+//         break;
+//     } else {
+//         alert ("Not Found")
+//     }
+    
+// }
+
+
+
+// Cheking words in Array 
+
+// var user = prompt("Enter Alpha from a to d");
+// var user = user.toLowerCase();
+// var alpha = ["a", "b", "c", "d"];
+// for (var i = 0; i <=alpha.length; i++) {
+//     if(user == alpha[i]){
+//         alert("letter");
+//         break;
+//     } else if (user !== alpha[i]) {
+//         alert ("Not Found");
+//     }
+//     break;
+// }
+
+
+// Finding ODD and Even Number in a variable.
+
+
+var str = "Hello, ";
+str += "world!";
+console.log(str);  // Outputs: "Hello, world!"
+
+
+
+
+var word = prompt("Please Enter Word");
+var check = "";
+
+for (var a = word.length -1; a>=0; a--) {
+    check += word[a];   
+    
+}
+
+if (word === check) {
+    console.log(word + "Done");
+    document.write(word);
+}
 
