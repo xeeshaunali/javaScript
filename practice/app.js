@@ -11,55 +11,54 @@
 //alert (num1);
 
 
-var names = ["a", "b", "c", "d"];
+// var names = ["a", "b", "c", "d"];
 
-console.log(names);
+// console.log(names);
 
-names.pop();
-console.log(names);
+// names.pop();
+// console.log(names);
 
-names.push("x");
-console.log(names);
-
-
-
-names.shift();
-console.log(names);
-
-names.unshift("first");
-console.log(names);
-
-var a = [1 ,"a","b","c"];
-console.log(a);
-
-var b = a.slice(0,4);
-console.log(b);
+// names.push("x");
+// console.log(names);
 
 
-a.splice(1,1,"z");
-console.log(a);
+// names.shift();
+// console.log(names);
 
-a[20] = "Empty";
-console.log(a);
+// names.unshift("first");
+// console.log(names);
 
-a.splice(3,17);
-console.log(a);
+// var a = [1 ,"a","b","c"];
+// console.log(a);
 
-console.log(a.length);
-
-
-var foods = [];
-console.log(foods);
-
-foods[0] = "a";
-foods[1] = "b";
-foods[2] = "c";
-console.log(foods);
+// var b = a.slice(0,4);
+// console.log(b);
 
 
-var threeArr = [1, 4, 6];
-var oneDown = threeArr.pop();
-console.log(oneDown); // Returns 6
+// a.splice(1,1,"z");
+// console.log(a);
+
+// a[20] = "Empty";
+// console.log(a);
+
+// a.splice(3,17);
+// console.log(a);
+
+// console.log(a.length);
+
+
+// var foods = [];
+// console.log(foods);
+
+// foods[0] = "a";
+// foods[1] = "b";
+// foods[2] = "c";
+// console.log(foods);
+
+
+// var threeArr = [1, 4, 6];
+// var oneDown = threeArr.pop();
+// console.log(oneDown); // Returns 6
 
 // var user = prompt("Enter NUmber");
 
@@ -89,15 +88,15 @@ console.log(oneDown); // Returns 6
 //     }
 // }
 
-var firstName = ['xee','aaa'];
-var lastName  = ['aa','ddd'];
+// var firstName = ['xee','aaa'];
+// var lastName  = ['aa','ddd'];
 
-for (var i = 0; i < firstName.length; i++ ) {
-    for(var j = 0; j< lastName.length; j++) {
-        console.log(firstName[i] + " " + lastName[i]);
-        document.write(firstName[i] + " " + lastName[i]);
-    }
-}
+// for (var i = 0; i < firstName.length; i++ ) {
+//     for(var j = 0; j< lastName.length; j++) {
+//         console.log(firstName[i] + " " + lastName[i]);
+//         document.write(firstName[i] + " " + lastName[i]);
+//     }
+// }
 
 
 // var table = +prompt("Please Enter Table Number");
@@ -109,43 +108,27 @@ for (var i = 0; i < firstName.length; i++ ) {
 
 // EVEN OFDD PROGRAM
 
-var arr = [1,2,3,4,5,6,7,8,9];
-var even = [];
-var odd  = [];
+// var arr = [1,2,3,4,5,6,7,8,9];
+// var even = [];
+// var odd  = [];
 
-for (var i = 0; i<=arr.length; i++) {
-    if (i % 2 == 0 ) {
-        even.push(i);
-    } else if (i %2 == 1) {
-        odd.push(i);
-    }
-}
-console.log(even);
-console.log(odd);
+// for (var i = 0; i<=arr.length; i++) {
+//     if (i % 2 == 0 ) {
+//         even.push(i);
+//     } else if (i %2 == 1) {
+//         odd.push(i);
+//     }
+// }
+// console.log(even);
+// console.log(odd);
 
 //CONVERT TO STRING
 
-var number = 999;
-var myNumber = number.toString();
-console.log(myNumber.length);
-var myNumber
+// var number = 999;
+// var myNumber = number.toString();
+// console.log(myNumber.length);
+// var myNumber
 
-
-
-
-// var pick = prompt("Please Select Alphabate");
-
-// var names = ["a","b","c","d"];
-
-// for (var i = 0; i <=names.length; i++) {
-//     if (pick == names[i]) {
-//         alert("Found")
-//         break;
-//     } else {
-//         alert ("Not Found")
-//     }
-    
-// }
 
 
 
@@ -165,27 +148,46 @@ var myNumber
 // }
 
 
-// Finding ODD and Even Number in a variable.
+
+// += adds 
+// var str = "Hello, ";
+// str += "world!";
+// console.log(str);  // Outputs: "Hello, world!"
+
+// var num = 10;
+// num += 20;
+// console.log(num);
 
 
-var str = "Hello, ";
-str += "world!";
-console.log(str);  // Outputs: "Hello, world!"
+// pelindrome word check
+
+// var word = prompt("Please Enter Pelindrome Word").trim().toLowerCase();
+// var check = "";
+
+// for (var i = word.length-1; i>=0; i--) {
+//     check += word[i];
+// }
+
+// if (check === word) {
+//     console.log(word + " " + "Word is Pelindrome Word" );
+// } else {
+//     console.log(word +  " " + "Word is Not Pelindorme Word ");
+// }
 
 
+// even or odd from array
 
+var number = [1,2,3,4,5,6,7,8,9];
+var even   = [];
+var odd    = [];
 
-
-var word = prompt("Please Enter word").trim().toLowerCase();
-var check = "";
-
-for (var i = word.length - 1; i >= 0; i--) {
-    check += word[i];
+for (var i = 0; i<=number.length; i++) {
+    if (i%2 ==0) {
+        even.push(i);        
+    } else if (i % 2 == 1) {
+        odd.push(i);
+    }
 }
 
-if (check === word) {
-    console.log(word + " is a palindrome");
-} else {
-    console.log(word + " is not a palindrome");
-}
-
+console.log(even);
+console.log(odd);
