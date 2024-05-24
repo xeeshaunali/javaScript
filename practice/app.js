@@ -175,16 +175,17 @@ console.log(str);  // Outputs: "Hello, world!"
 
 
 
-var word = prompt("Please Enter Word");
+
+var word = prompt("Please Enter word").trim().toLowerCase();
 var check = "";
 
-for (var a = word.length -1; a>=0; a--) {
-    check += word[a];   
-    
+for (var i = word.length - 1; i >= 0; i--) {
+    check += word[i];
 }
 
-if (word === check) {
-    console.log(word + "Done");
-    document.write(word);
+if (check === word) {
+    console.log(word + " is a palindrome");
+} else {
+    console.log(word + " is not a palindrome");
 }
 
