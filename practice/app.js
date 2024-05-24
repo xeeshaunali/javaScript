@@ -89,19 +89,6 @@ console.log(oneDown); // Returns 6
 //     }
 // }
 
-var numbers = [1,2,3,4];
-var even = [];
-var odd  = [];
-for (var i = 0; i <= numbers.length; i++) {
-    if (i % 2 == 0) {
-        even.push(i);        
-    } else if (i % 2 == 1) {
-        odd.push(i);       
-    }
-}
-console.log("Even" + " " + even);
-console.log("Odd" + " " + odd);
-
 var firstName = ['xee','aaa'];
 var lastName  = ['aa','ddd'];
 
@@ -113,11 +100,29 @@ for (var i = 0; i < firstName.length; i++ ) {
 }
 
 
-var table = +prompt("Enter Table number");
-for (var i = 1; i<=10; i++) {
-    document.write(table + " " + "X" + " " + i )
+// var table = +prompt("Please Enter Table Number");
+// for (var i = 0; i <=10; i++) {
+//     document.write(table + "X" + i + "=" + table*i + "<br>" );
+// }
+
+
+var arr = [1,2,3,4,5,6,7,8,9];
+var even = [];
+var odd  = [];
+
+for (var i = 0; i<=arr.length; i++) {
+    if (i % 2 == 0 ) {
+        even.push(i);
+    } else if (i %2 == 1) {
+        odd.push(i);
+    }
 }
+console.log(even);
+console.log(odd);
 
-
-
+var number = 999;
+var myNumber = number.toString();
+console.log(myNumber.length);
+var index1 = myNumber.indexOf(-1);
+console.log(index1);
 
