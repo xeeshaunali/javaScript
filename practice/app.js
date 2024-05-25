@@ -177,17 +177,36 @@
 
 
 //LOGIC BUILDING 
-let n = 10;
-let string = "";
-for (var i = 1; i<=n; i++) {
-    document.write(i + "<br>");
-    for (var j =1; j <=i;j++){
-        string+= "i";
+// let n = 10;
+// let string = "";
+// for (var i = 1; i<=n; i++) {
+//     document.write(i + "<br>");
+//     for (var j =1; j <=i;j++){
+//         string+= "i";
+//     }
+//     string += "\n" + "<br>";
+// }
+
+// document.write(string);
+
+
+var user = prompt("Enter Word").trim();
+var firstChar = user.slice(0,1).toUpperCase();
+console.log(firstChar); // check first Character is Working
+var otherChar = user.slice(1).toLowerCase();
+console.log(otherChar);
+var finalName = firstChar + otherChar;
+
+var names = ["Xee", "Shaun"];
+
+for (var i = 0; i<=names.length; i++) {
+    if (finalName == names[i]){
+        console.log("Converted to Capital First Charactor");
+        break;
     }
-    string += "\n" + "<br>";
+    else if (finalName !== names[i]) {
+        console.log("Failed")
+    }
 }
-
-document.write(string);
-
 
 
