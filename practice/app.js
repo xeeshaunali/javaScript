@@ -190,13 +190,24 @@ for (var i = 1; i<=n; i++) {
 document.write(string);
 
 
-var number = 999;
-console.log(typeof(number));
-number = number.toString();
-console.log(typeof(number));
+
+var user = prompt("Please Enter Worfd to Check in Array").trim().toLowerCase();
+var word = ["a","b","c","d"];
 
 
-var number = 100;
-console.log(number);
-number += 100;
-console.log(number);
+for (var i = 0; i<=word.length; i++){
+	
+    if (user == word[i]) {
+        console.log("Word Found");
+        break;
+    } else if (user !== word[i]) {
+        console.log("Word Not Found");
+    break;
+    }
+}
+
+
+
+		
+
+
