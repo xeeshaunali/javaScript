@@ -191,23 +191,17 @@ document.write(string);
 
 
 
-var user = prompt("Please Enter Worfd to Check in Array").trim().toLowerCase();
-var word = ["a","b","c","d"];
+var user = prompt("Please Enter Pelindrome Word Check").trim().toLowerCase();
+var check = "";
 
-
-for (var i = 0; i<=word.length; i++){
-	
-    if (user == word[i]) {
-        console.log("Word Found");
-        break;
-    } else if (user !== word[i]) {
-        console.log("Word Not Found");
-    break;
-    }
+for (var i = user.length-1; i>=0; i--) {
+	check+=user[i];	
 }
 
-
-
-		
-
+if (user == check) {
+	console.log(check + " " + "Word is Pelindrom");
+}
+else if (user !== check){
+	console.log(check + " " + "Word is not a Pelindrom")	
+}
 
