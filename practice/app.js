@@ -175,19 +175,28 @@
 // }
 
 
-// even or odd from array
 
-var number = [1,2,3,4,5,6,7,8,9];
-var even   = [];
-var odd    = [];
-
-for (var i = 0; i<=number.length; i++) {
-    if (i%2 ==0) {
-        even.push(i);        
-    } else if (i % 2 == 1) {
-        odd.push(i);
+//LOGIC BUILDING 
+let n = 10;
+let string = "";
+for (var i = 1; i<=n; i++) {
+    document.write(i + "<br>");
+    for (var j =1; j <=i;j++){
+        string+= "*";
     }
+    string += "\n" + "<br>";
 }
 
-console.log(even);
-console.log(odd);
+document.write(string);
+
+
+var number = 999;
+console.log(typeof(number));
+number = number.toString();
+console.log(typeof(number));
+
+
+var number = 100;
+console.log(number);
+number += 100;
+console.log(number);
