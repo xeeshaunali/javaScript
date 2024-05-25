@@ -182,7 +182,7 @@ let string = "";
 for (var i = 1; i<=n; i++) {
     document.write(i + "<br>");
     for (var j =1; j <=i;j++){
-        string+= "*";
+        string+= "i";
     }
     string += "\n" + "<br>";
 }
@@ -190,18 +190,4 @@ for (var i = 1; i<=n; i++) {
 document.write(string);
 
 
-
-var user = prompt("Please Enter Pelindrome Word Check").trim().toLowerCase();
-var check = "";
-
-for (var i = user.length-1; i>=0; i--) {
-	check+=user[i];	
-}
-
-if (user == check) {
-	console.log(check + " " + "Word is Pelindrom");
-}
-else if (user !== check){
-	console.log(check + " " + "Word is not a Pelindrom")	
-}
 
