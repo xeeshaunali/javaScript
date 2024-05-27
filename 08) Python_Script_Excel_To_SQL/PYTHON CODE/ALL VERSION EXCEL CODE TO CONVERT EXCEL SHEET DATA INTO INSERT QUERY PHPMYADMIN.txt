@@ -1,0 +1,130 @@
+Yes, the provided script will work with various versions of Excel files, specifically .xlsx files, which are the most common Excel file format used nowadays. The script uses the pandas library along with openpyxl to read the Excel files. The openpyxl library is capable of handling .xlsx files created by different versions of Microsoft Excel.
+
+However, if you have older Excel files in the .xls format, you will need to use a different engine to read the files. The pandas library can work with the xlrd library to read .xls files.
+
+Here’s how you can modify the script to support both .xlsx and .xls files:
+
+Modified Script to Support Both .xlsx and .xls Files
+Install Required Libraries:
+Ensure you have pandas, openpyxl, and xlrd installed. You can install them using pip:
+
+sh
+Copy code
+pip install pandas openpyxl xlrd
+Update the Script:
+Modify the script to check the file extension and use the appropriate engine.
+
+Python Script
+python
+Copy code
+import pandas as pd
+import os
+
+def get_sheet_names(excel_file):
+    """Get the list of sheet names from the Excel file."""
+    if excel_file.endswith('.xlsx'):
+        xls = pd.ExcelFile(excel_file, engine='openpyxl')
+    elif excel_file.endswith('.xls'):
+        xls = pd.ExcelFile(excel_file, engine='xlrd')
+    else:
+        raise ValueError("Unsupported file format")
+    return xls.sheet_names
+
+def excel_to_sql_insert(excel_file, sheet_name, table_name):
+    # Read the Excel file
+    try:
+        if excel_file.endswith('.xlsx'):
+            df = pd.read_excel(excel_file, sheet_name=sheet_name, engine='openpyxl')
+        elif excel_file.endswith('.xls'):
+            df = pd.read_excel(excel_file, sheet_name=sheet_name, engine='xlrd')
+        else:
+            raise ValueError("Unsupported file format")
+    except ValueError as e:
+        print(f"Error: {e}")
+        return []
+    
+    # Set 'id' column to an empty string if it exists
+    if 'id' in df.columns:
+        df['id'] = ' '
+    
+    # Generate SQL INSERT statements
+    insert_queries = []
+    for index, row in df.iterrows():
+        # Get column names and values
+        columns = ', '.join(df.columns)
+        values = ', '.join([f"'{str(value)}'" if not pd.isna(value) else 'NULL' for value in row])
+        
+        # Create the INSERT query
+        query = f"INSERT INTO {table_name} ({columns}) VALUES ({values});"
+        insert_queries.append(query)
+    
+    return insert_queries
+
+if __name__ == "__main__":
+    excel_file = 'your_excel_file.xlsx'  # Replace with your file name
+    table_name = 'your_table_name'  # Replace with your table name
+    
+    # Print available sheet names
+    sheet_names = get_sheet_names(excel_file)
+    print("Available sheet names:", sheet_names)
+    
+    # Update this to match one of the available sheet names
+    sheet_name = 'Sheet1'  # Replace with the correct sheet name
+    
+    queries = excel_to_sql_insert(excel_file, sheet_name, table_name)
+    
+    # Save the queries to a file
+    output_file = 'output.sql'
+    with open(output_file, 'w') as file:
+        for query in queries:
+            file.write(query + '\n')
+    
+    print(f"SQL INSERT queries have been saved to {output_file}")
+Explanation
+Check File Extension:
+
+The script checks the file extension to determine whether to use openpyxl for .xlsx files or xlrd for .xls files.
+Raises a ValueError for unsupported file formats.
+Read Excel File:
+
+Uses the appropriate engine based on the file extension when reading the Excel file.
+Running the Script
+Save the Script:
+
+Save the modified script to a file, for example, excel_to_sql.py.
+Run the Script:
+
+Open Command Prompt and navigate to the directory where your script is located.
+Run the script:
+sh
+Copy code
+python excel_to_sql.py
+Check the Output File:
+
+After running the script, you will find a file named output.sql in the same directory as the script. This file contains all the generated SQL INSERT queries suitable for phpMyAdmin, with the id field set to an empty string (' ').
+Example Adjustment for File Paths
+If your files are located in different directories, update the paths accordingly:
+
+python
+Copy code
+if __name__ == "__main__":
+    excel_file = 'C:\\path\\to\\your\\excel_file.xlsx'  # Use double backslashes or raw strings
+    table_name = 'your_table_name'  # Replace with your table name
+    
+    # Print available sheet names
+    sheet_names = get_sheet_names(excel_file)
+    print("Available sheet names:", sheet_names)
+    
+    # Update this to match one of the available sheet names
+    sheet_name = 'Sheet1'  # Replace with the correct sheet name
+    
+    queries = excel_to_sql_insert(excel_file, sheet_name, table_name)
+    
+    # Save the queries to a file
+    output_file = 'C:\\path\\to\\save\\output.sql'  # Specify the full path to save the output file
+    with open(output_file, 'w') as file:
+        for query in queries:
+            file.write(query + '\n')
+    
+    print(f"SQL INSERT queries have been saved to {output_file}")
+This ensures compatibility with both .xlsx and .xls file formats and proper handling of different Excel file versions.

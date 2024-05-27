@@ -1,0 +1,107 @@
+The provided script prints the SQL INSERT queries to the console. If you want to save the output to a file, you need to modify the script to write the queries to a text file.
+
+Modified Python Script to Save Output to a File
+Here's how you can modify the script to save the output to a file:
+
+python
+Copy code
+import pandas as pd
+
+def get_sheet_names(excel_file):
+    """Get the list of sheet names from the Excel file."""
+    xls = pd.ExcelFile(excel_file)
+    return xls.sheet_names
+
+def excel_to_sql_insert(excel_file, sheet_name, table_name):
+    # Read the Excel file
+    try:
+        df = pd.read_excel(excel_file, sheet_name=sheet_name)
+    except ValueError as e:
+        print(f"Error: {e}")
+        return []
+    
+    # Generate SQL INSERT statements
+    insert_queries = []
+    for index, row in df.iterrows():
+        # Get column names and values
+        columns = ', '.join(df.columns)
+        values = ', '.join([f"'{str(value)}'" if not pd.isna(value) else 'NULL' for value in row])
+        
+        # Create the INSERT query
+        query = f"INSERT INTO {table_name} ({columns}) VALUES ({values});"
+        insert_queries.append(query)
+    
+    return insert_queries
+
+if __name__ == "__main__":
+    excel_file = 'your_excel_file.xlsx'  # Replace with your file name
+    table_name = 'your_table_name'  # Replace with your table name
+    
+    # Print available sheet names
+    sheet_names = get_sheet_names(excel_file)
+    print("Available sheet names:", sheet_names)
+    
+    # Update this to match one of the available sheet names
+    sheet_name = 'Sheet1'  # Replace with the correct sheet name
+    
+    queries = excel_to_sql_insert(excel_file, sheet_name, table_name)
+    
+    # Save the queries to a file
+    output_file = 'output.sql'
+    with open(output_file, 'w') as file:
+        for query in queries:
+            file.write(query + '\n')
+    
+    print(f"SQL INSERT queries have been saved to {output_file}")
+Explanation
+Function to Get Sheet Names:
+
+get_sheet_names function lists all sheet names in the provided Excel file.
+Function to Generate SQL INSERT Queries:
+
+excel_to_sql_insert function generates SQL INSERT statements from the specified sheet.
+Main Block:
+
+Checks available sheet names and prints them.
+Generates SQL INSERT queries from the specified sheet.
+Saves the generated queries to a file named output.sql.
+Usage
+Save the Script:
+
+Save the modified script to a file, for example, excel_to_sql.py.
+Run the Script:
+
+Open Command Prompt and navigate to the directory where your script is located.
+Run the script:
+sh
+Copy code
+python excel_to_sql.py
+Check the Output File:
+
+After running the script, you will find a file named output.sql in the same directory as the script. This file contains all the generated SQL INSERT queries.
+Example Adjustments for File Paths
+If your files are located in different directories, update the paths accordingly:
+
+python
+Copy code
+if __name__ == "__main__":
+    excel_file = 'C:\\path\\to\\your\\excel_file.xlsx'  # Use double backslashes or raw strings
+    table_name = 'your_table_name'  # Replace with your table name
+    
+    # Print available sheet names
+    sheet_names = get_sheet_names(excel_file)
+    print("Available sheet names:", sheet_names)
+    
+    # Update this to match one of the available sheet names
+    sheet_name = 'Sheet1'  # Replace with the correct sheet name
+    
+    queries = excel_to_sql_insert(excel_file, sheet_name, table_name)
+    
+    # Save the queries to a file
+    output_file = 'C:\\path\\to\\save\\output.sql'  # Specify the full path to save the output file
+    with open(output_file, 'w') as file:
+        for query in queries:
+            file.write(query + '\n')
+    
+    print(f"SQL INSERT queries have been saved to {output_file}")
+This ensures that the output file is saved in the specified directory.

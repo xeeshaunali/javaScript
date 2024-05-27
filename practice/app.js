@@ -189,13 +189,13 @@
 
 // document.write(string);
 
-
 var user = prompt("Enter Word").trim();
 var firstChar = user.slice(0,1).toUpperCase();
 console.log(firstChar); // check first Character is Working
 var otherChar = user.slice(1).toLowerCase();
 console.log(otherChar);
 var finalName = firstChar + otherChar;
+console.log(finalName);
 
 var names = ["Xee", "Shaun"];
 
