@@ -1,0 +1,45 @@
+Converting JSON data back to SQL involves:
+
+Reading the JSON file.
+Parsing the JSON data.
+Constructing SQL INSERT statements based on the JSON data.
+Below is a script to achieve this:
+
+python
+Copy code
+import json
+
+# Read JSON file
+with open('input.json', 'r') as json_file:
+    data = json.load(json_file)
+
+# Check if data is not empty
+if not data:
+    raise ValueError("JSON data is empty")
+
+# Extract table name and column names from the first row
+table_name = 'tablename'
+columns = list(data[0].keys())
+
+# Construct SQL INSERT statements
+sql_inserts = []
+for row in data:
+    values = ','.join([f"'{value}'" if isinstance(value, str) else str(value) for value in row.values()])
+    sql_inserts.append(f"INSERT INTO {table_name} ({', '.join(columns)}) VALUES ({values});")
+
+# Save SQL INSERT statements to a file
+with open('output.sql', 'w') as sql_file:
+    sql_file.write('\n'.join(sql_inserts))
+
+print("SQL data has been successfully saved to output.sql")
+This script assumes the following:
+
+The JSON file contains an array of objects, where each object represents a row of data.
+All objects in the JSON array have the same structure, with keys representing column names and values representing data for each column.
+The table name is known beforehand (or can be specified in the script).
+To use this script, save it as convert_json_to_sql.py and place your JSON file named input.json in the same directory. Then, run the script using Python:
+
+sh
+Copy code
+python convert_json_to_sql.py
+This will generate an SQL file named output.sql containing SQL INSERT statements based on the data in your JSON file. Adjust the table_name variable as needed to match your table's name.
