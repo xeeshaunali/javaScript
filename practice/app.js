@@ -210,15 +210,11 @@
 // }
 
 
-// Repalce String in a Sentence
 
-// Last IndexOF String
+// Chech Charactor  index 
 
+var text ="Xeeshaun";
 
-var text ="To be or not to be.";
-var lastIndex = text.lastIndexOf(".");
-console.log(lastIndex);
-
-
+console.log(text.charAt(7));
 
 
