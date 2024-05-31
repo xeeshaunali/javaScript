@@ -210,11 +210,14 @@
 // }
 
 
+// Check Indexof String 
+var text = "Hello World!";
 
-// Chech Charactor  index 
-
-var text ="Xeeshaun";
-
-console.log(text.charAt(7));
-
+for (var i = 0; i <=text.length; i++) {
+    if (text.charAt(i) === "!") {        
+        console.log("Exclaimation Mark Found")        
+        console.log(text.indexOf("!") + " " + "Index Found");   
+        break;              
+    }
+}
 
