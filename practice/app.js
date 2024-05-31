@@ -210,20 +210,14 @@
 // }
 
 
+// Repalce String in a Sentence
 
-var text = "A Quick Brown Fox";
-var num = text.indexOf("Fox");
-console.log(num);
-
-for (var i =0; i <=text.length; i++) {
-    var numChar = text.indexOf("Fox");
-    console.log(numChar);
-    break;
-}
+// Last IndexOF String
 
 
-
-
+var text ="To be or not to be.";
+var lastIndex = text.lastIndexOf(".");
+console.log(lastIndex);
 
 
 
