@@ -210,10 +210,10 @@
 // }
 
 
-// Check Replace String  
+// Math Round Method
 
-var text = "Word Replaced Brown Fox";
 
-var repalcetext = text.replace("Word Replaced", "Replaced Word");
-console.log(repalcetext);
+var num = 10.53569
+console.log(num);
+console.log(Math.round(num));
 
