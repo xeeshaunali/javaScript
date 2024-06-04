@@ -210,15 +210,23 @@
 // }
 
 
-var head = prompt("Head User Name");
-var tail = prompt("Tail User Name");
+// // Head OR Tail Program
 
-var toss= Math.random() * 2;
+// var head = prompt("Head User Name");
+// var tail = prompt("Tail User Name");
 
-var floor = Math.floor(toss);
+// var toss= Math.random() * 2;
 
-if (floor === 0) {
-    console.log("Heads Win" + " " + head );
-} else {
-    console.log("Tails Wins" + " " + tail);
-}
+// var floor = Math.floor(toss);
+
+// if (floor === 0) {
+//     console.log("Heads Win" + " " + head );
+// } else {
+//     console.log("Tails Wins" + " " + tail);
+// }
+
+// toFixed() method fixes to range from decimal
+console.log(Math.random().toFixed(0));
+console.log(Math.random().toFixed(1));
+console.log(Math.random().toFixed(2));
+console.log(Math.random().toFixed(3));
