@@ -210,23 +210,15 @@
 // }
 
 
-// Math Methods
-var round = 10.53;
-console.log(Math.round(round));
+var head = prompt("Head User Name");
+var tail = prompt("Tail User Name");
 
-var ceil = 9.0001;
-console.log(Math.ceil(ceil));
+var toss= Math.random() * 2;
 
+var floor = Math.floor(toss);
 
-var floor = 9.999;
-console.log(Math.floor(floor));
-
-var random;
-console.log(Math.random(random)); // takes range between 0 and 1;
-
-
-var range;
-console.log(Math.random(range) * 3); //* 3 is range 
-
-console.log(Math.random() * 100); 
-
+if (floor === 0) {
+    console.log("Heads Win" + " " + head );
+} else {
+    console.log("Tails Wins" + " " + tail);
+}
