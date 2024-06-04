@@ -19,7 +19,7 @@ console.log(Math.random(range) * 3); //* 3 is range
 console.log(Math.random() * 100); 
 
 
-// toFixed() method fixes to range from decimal
+// toFixed() method control range of decimal
 console.log(Math.random().toFixed(0));
 console.log(Math.random().toFixed(1));
 console.log(Math.random().toFixed(2));
