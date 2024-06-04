@@ -23,3 +23,9 @@ console.log(date.getSeconds());
 console.log(date.getMilliseconds());
 
 console.log(date.getTime());
+
+
+
+// Date Can be Assigned
+var datee = new Date("August 24, 1980");
+console.log(datee);

@@ -258,6 +258,12 @@ console.log(date.getMilliseconds());
 
 console.log(date.getTime());
 
+console.log(date.getFullYear());
+
+// Date Can be Assigned
+var datee = new Date("August 24, 1980");
+console.log(datee);
+
 
 
 
