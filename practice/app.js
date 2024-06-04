@@ -212,8 +212,8 @@
 
 // Check Replace String  
 
-var word = "First Word To Repalce Quick Fox";
+var text = "Word Replaced Brown Fox";
 
-var words = word.replace("Letter Repalced", "First Word To Repalce");
-console.log(words);
+var repalcetext = text.replace("Word Replaced", "Replaced Word");
+console.log(repalcetext);
 
