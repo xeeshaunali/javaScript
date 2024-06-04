@@ -210,14 +210,10 @@
 // }
 
 
-// Check Indexof String 
-var text = "Hello World!";
+// Check Replace String  
 
-for (var i = 0; i <=text.length; i++) {
-    if (text.charAt(i) === "!") {        
-        console.log("Exclaimation Mark Found")        
-        console.log(text.indexOf("!") + " " + "Index Found");   
-        break;              
-    }
-}
+var word = "First Word To Repalce Quick Fox";
+
+var words = word.replace("Letter Repalced", "First Word To Repalce");
+console.log(words);
 
